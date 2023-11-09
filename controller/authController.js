@@ -131,4 +131,10 @@ export const testController = (req, res) => {
 };
 
 
-export default registerController;
+// export default registerController;
+// export default loginController;
+
+
+
+
+

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Layout from './../../components/layout/Layout';
-import { toast } from 'react-toastify';
-import axios from 'axios';
 // import { toast } from 'react-toastify';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 // import toast from "react-hot-toast";
 import { useNavigate } from 'react-router-dom';

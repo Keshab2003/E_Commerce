@@ -5,10 +5,12 @@ import { useNavigate } from "react-router-dom";
 // import toast from "react-hot-toast";
 import { toast } from 'react-toastify';
 import "../../styles/AuthStyles.css";
+import { useAuth } from "../../components/context/auth";
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [auth, setAuth] = useAuth()
 
     const navigate = useNavigate();
 
@@ -18,16 +20,33 @@ const Login = () => {
         try {
             const res = await axios.post(`${process.env.REACT_APP_API}/api/v1/auth/login`, { email, password });
             // const res = await axios.post("api/v1/auth/login", { email, password });
-            if (res.data.success) {
-                toast.success(res.data.message)
+            //     if (res.data.success) {
+            //         toast.success(res.data.message)
 
-                navigate('/');
+            //         navigate('/');
+            //     } else {
+            //         toast.error(res.data.message)
+            //     }
+            // } catch (error) {
+            //     console.log(error)
+            //     toast.error("Something went wrong!")
+            // }
+
+            if (res && res.data.success) {
+                toast.success(res.data && res.data.message);
+                setAuth({
+                    ...auth,
+                    user: res.data.user,
+                    token: res.data.token,
+                })
+                localStorage.setItem('auth', JSON.stringify(res.data));
+                navigate("/");
             } else {
-                toast.error(res.data.message)
+                toast.error(res.data.message);
             }
         } catch (error) {
-            console.log(error)
-            toast.error("Something went wrong!")
+            console.log(error);
+            toast.error("Something went wrong");
         }
         // try {
         //     // const res = await axios.post("/api/v1/auth/login", {
