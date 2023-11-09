@@ -9,17 +9,26 @@ font-family: 'Poppins', sans-serif; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 /* Navbar css */
 .navbar {
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
   font-size: 17px;
   line-height: 26px;
   text-transform: uppercase;
   box-shadow: 0 8px 6px -6px gray;
   --webkit-box-shadow: 0 8px 6px -6px gray;
   border-bottom: 0px solid gray;
+}
+
+#hello {
+  font-weight: bold;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
 }
 
 .nav-link {
@@ -40,10 +49,9 @@ font-family: 'Poppins', sans-serif; */
   color: white;
   padding: 25px;
   background: #000;
-  background: --webkit-linear-gradient(to right,
-      #434343,
+  background: --webkit-linear-gradient(#434343,
       #000);
-  background: linear-gradient(to right, #434343,
+  background: linear-gradient(#434343,
       #000);
 }
 
@@ -101,4 +109,37 @@ font-family: 'Poppins', sans-serif; */
 .kc1 {
   padding-left: 10%;
   margin-top: 10px;
+
+}
+
+.cnt {
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+}
+
+
+/* Register page */
+.register {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 70vh;
+  /* box-sizing: border-box; */
+
+
+}
+
+.hi1 {
+  justify-content: space-between;
+}
+
+.hi {
+  margin-left: 25%;
+
+}
+
+.form-control {
+  display: flex;
+  justify-content: center;
 }

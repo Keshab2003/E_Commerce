@@ -8,6 +8,7 @@ import morgan from 'morgan'
 import { connect } from 'mongoose';
 import connectDB from './config/db.js';
 import authRoutes from './routes/authRoute.js'
+import cors from 'cors'
 
 //config env
 dotenv.config();
@@ -17,6 +18,9 @@ connectDB();
 
 //rest object
 const app = express()
+
+//middel ware
+app.use(cors());
 app.use(express.json())
 app.use(morgan('dev'))
 

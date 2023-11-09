@@ -30,8 +30,8 @@ import { BiMailSend, BiPhoneCall, BiSupport } from "react-icons/bi";
 
 const Contact = () => {
     return (
-        <Layout>
-            <div className="row g-3">
+        <Layout title="Contact us">
+            <div className="row g-3 cnt">
                 <div className="col kc1">
                     {/* <img src="E:/web dev projects/E_Commerce/Picsart_23-05-09_12-32-31-466.jpg" alt="contact_image_loading error" className="rounded float-start" /> */}
                     <img
